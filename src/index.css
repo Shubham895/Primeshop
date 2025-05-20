@@ -1,0 +1,100 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 32 100% 49%;  /* Amazon Orange */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 214 38% 19%; /* Amazon Blue */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 46 100% 71%; /* Amazon Yellow */
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 32 100% 49%;  /* Amazon Orange */
+
+    --radius: 0.3rem;
+  }
+
+  .dark {
+    --background: 220 13% 8%;  /* Amazon Dark Gray */
+    --foreground: 210 40% 98%;
+
+    --card: 220 13% 8%; /* Amazon Dark Gray */
+    --card-foreground: 210 40% 98%;
+
+    --popover: 220 13% 8%; /* Amazon Dark Gray */
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 32 100% 49%; /* Amazon Orange */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 214 29% 29%; /* Amazon Light Blue */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 46 100% 71%; /* Amazon Yellow */
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 32 100% 49%; /* Amazon Orange */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .product-card {
+    @apply relative bg-card rounded-md overflow-hidden border border-border transition-all duration-200 hover:shadow-lg;
+  }
+  
+  .badge-prime {
+    @apply bg-amazon-orange text-white text-xs px-2 py-0.5 rounded-sm font-medium;
+  }
+  
+  .rating-stars {
+    @apply text-amazon-orange flex;
+  }
+  
+  .cart-btn {
+    @apply bg-amazon-yellow text-amazon-blue hover:bg-amazon-orange hover:text-white transition-colors duration-200 rounded-full;
+  }
+  
+  .btn-amazon {
+    @apply bg-amazon-yellow hover:bg-amazon-orange text-amazon-blue hover:text-white py-2 px-4 rounded transition-colors duration-200;
+  }
+}
